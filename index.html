@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitación digital elegante para nuestra boda">
+    <title>Nuestra Boda - Invitación</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Control de música -->
+    <div class="music-control" id="musicControl">
+        <button class="music-btn" id="musicBtn" aria-label="Controlar música">
+            <span class="music-icon play" id="musicIcon">♫</span>
+        </button>
+        <audio id="backgroundMusic" loop>
+            <source src="assets/audio/wedding-music.mp3" type="audio/mpeg">
+            <source src="assets/audio/wedding-music.ogg" type="audio/ogg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+    </div>
+
+    <!-- Sección Hero / Portada -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="names-container">
+                <h1 class="name name-left">Chonita</h1>
+                <span class="ampersand">&</span>
+                <h1 class="name name-right">Rubén</h1>
+            </div>
+            <p class="romantic-phrase">"El amor es paciente y bondadoso; no es egoísta ni orgulloso, no guarda rencor y
+                se alegra con la verdad. Todo lo soporta
+                y nunca se acaba, a diferencia de los dones y conocimientos, que son pasajeros."</p>
+            <p class="verse">- 1 Corintios 13:4,8 -</p>
+            <div class="date-container">
+                <div class="date-item">
+                    <span class="date-label">Día</span>
+                    <span class="date-value" id="weddingDay">21</span>
+                </div>
+                <div class="date-separator">de</div>
+                <div class="date-item">
+                    <span class="date-label">Mes</span>
+                    <span class="date-value" id="weddingMonth">Marzo</span>
+                </div>
+                <div class="date-separator">de</div>
+                <div class="date-item">
+                    <span class="date-label">Año</span>
+                    <span class="date-value" id="weddingYear">2026</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Desliza para descubrir nuestra historia</span>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Carta de Invitación -->
+    <section class="invitation" id="invitation">
+        <div class="container">
+            <div class="invitation-card fade-in-up">
+                <div class="invitation-couple-names">Chonita y Rubén</div>
+                
+                <div class="invitation-romantic-phrase">DOS CORAZONES, UNA VIDA. ¿NOS ACOMPAÑAS?</div>
+                
+                <div class="invitation-intro">CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES:</div>
+                
+                <div class="invitation-parents-section">
+                    <div class="invitation-parents-group">
+                        <div class="invitation-parents-label">PADRES DE LA NOVIA:</div>
+                        <div class="invitation-parent-name">FRANCISCA MEDINA PAEZ</div>
+                        <div class="invitation-parent-name">COSME GUZMÁN VILLELA</div>
+                    </div>
+                    
+                    <div class="invitation-ampersand">&</div>
+                    
+                    <div class="invitation-parents-group">
+                        <div class="invitation-parents-label">PADRES DEL NOVIO:</div>
+                        <div class="invitation-parent-name">YOLANDA ALVAREZ ROSALES</div>
+                        <div class="invitation-parent-name">RUBEN ESPINOZA TIZNADO</div>
+                    </div>
+                </div>
+                
+                <div class="invitation-godparents-section">
+                    <div class="invitation-godparents-group">
+                        <div class="invitation-godparents-label">PADRINOS DE VELACIÓN:</div>
+                        <div class="invitation-godparent-name">HUMBERTO LAURO GONZALEZ TORRES</div>
+                        <div class="invitation-godparent-name">ALDA ILIANA SAMANIEGO TOSCANO</div>
+                    </div>
+                    
+                    <div class="invitation-godparents-group">
+                        <div class="invitation-godparents-label">PADRINOS DE MATRIMONIO:</div>
+                        <div class="invitation-godparent-name">ANGELICA YULIAN GONZALEZ LÓPEZ</div>
+                        <div class="invitation-godparent-name">CARLOS ALONSO NIEBLA FLORES</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuenta Regresiva -->
+    <section class="countdown-section" id="countdown">
+        <div class="container">
+            <h2 class="section-title">Faltan</h2>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Detalles del Evento -->
+    <section class="event-details" id="eventDetails">
+        <div class="container">
+            <h2 class="section-title">Detalles del Evento</h2>
+            <div class="details-grid">
+                <div class="detail-card fade-in-up">
+                    <div class="detail-icon-wrapper">
+                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 2V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 14H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 14H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 14H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 18H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Fecha</h3>
+                    <p class="detail-value">21 de Marzo, 2026</p>
+                </div>
+
+                <div class="detail-card fade-in-up">
+                    <div class="detail-icon-wrapper">
+                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Hora</h3>
+                    <p class="detail-value">3:00 PM</p>
+                </div>
+
+                <div class="detail-card fade-in-up">
+                    <div class="detail-icon-wrapper">
+                        <svg class="detail-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Lugar</h3>
+                    <p class="detail-value">Parroquia de Nuestra Señora de Fátima</p>
+                    <p class="detail-address">Rosarito, Baja California</p>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="map-container fade-in-up">
+                <div class="map-placeholder" id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4060.129821554101!2d-117.05689812435533!3d32.33857307384996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d931c0353aa23b%3A0x42f7a96da55c68df!2sParroquia%20Nuestra%20Se%C3%B1ora%20del%20Rosario%20de%20Fatima!5e1!3m2!1ses-419!2smx!4v1769029613174!5m2!1ses-419!2smx"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Nuestros Momentos</h2>
+            <div class="gallery-carousel-wrapper">
+                <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Imagen anterior">‹</button>
+                <div class="gallery-carousel" id="galleryCarousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide">
+                            <img src="assets/img/gallery/w1.jpeg" alt="Momento 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/gallery/w2.jpeg" alt="Momento 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/gallery/w3.jpeg" alt="Momento 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/img/gallery/w4.jpeg" alt="Momento 4">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Imagen siguiente">›</button>
+            </div>
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox para galería -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">×</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Imagen anterior">‹</button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Imagen siguiente">›</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Galería">
+        </div>
+    </div>
+
+    <!-- Sección Recepción -->
+    <section class="reception" id="reception">
+        <div class="container">
+            <h2 class="section-title">Recepción</h2>
+            <div class="reception-content fade-in-up">
+                <div class="reception-card">
+                    <div class="reception-icon">🍽️</div>
+                    <h3 class="reception-title">Después de la Misa</h3>
+                    <p class="reception-message">
+                        Después de la misa, los invitamos a acompañarnos a cenar y celebrar juntos este momento tan especial.
+                    </p>
+                    
+                    <div class="reception-details">
+                        <div class="reception-cost">
+                            <span class="cost-label">Costo por persona:</span>
+                            <span class="cost-amount">$550 MXN</span>
+                        </div>
+                        
+                        <div class="reception-confirmation">
+                            <p class="confirmation-text">
+                                Para confirmar tu asistencia, realiza el depósito correspondiente al siguiente número de tarjeta:
+                            </p>
+                            <div class="card-number">
+                                <span class="card-label">Número de tarjeta:</span>
+                                <span class="card-value">[Número de tarjeta]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Final -->
+    <section class="final-section">
+        <div class="container">
+            <div class="final-content">
+                <p class="final-message">"El mejor amor es el que despierta el alma y nos hace esforzarnos por más, que
+                    enciende nuestros corazones y pacifica nuestras mentes."</p>
+                <div class="signature">
+                    <p class="signature-names">Chonita & Rubén</p>
+                </div>
+            </div>
+            <div class="decorative-elements">
+                <div class="decoration-line"></div>
+                <div class="decoration-heart">♥</div>
+                <div class="decoration-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Hecho con amor para nuestro día especial</p>
+        <p class="footer-date">© 2026</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

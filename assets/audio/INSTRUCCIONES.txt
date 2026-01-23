@@ -1,0 +1,38 @@
+INSTRUCCIONES PARA AGREGAR MÚSICA AMBIENTAL
+============================================
+
+1. Busca música instrumental elegante y apropiada para una boda.
+   Recomendaciones:
+   - Música clásica suave
+   - Instrumental romántica
+   - Piano o guitarra acústica
+   - Sin derechos de autor o con licencia adecuada
+
+2. Formatos soportados:
+   - MP3 (recomendado)
+   - OGG
+
+3. Nombra el archivo como: "wedding-music.mp3"
+
+4. Colócalo en esta carpeta: assets/audio/
+
+5. El archivo se reproducirá automáticamente cuando el usuario
+   haga clic en el botón de música (los navegadores bloquean
+   la reproducción automática sin interacción del usuario).
+
+6. Volumen recomendado: Bajo a medio (se ajusta a 30% automáticamente).
+
+7. Duración recomendada: De 3 a 5 minutos (se reproduce en loop).
+
+
+NOTA LEGAL:
+Asegúrate de tener los derechos para usar la música o utilizar
+música de dominio público o con licencia adecuada.
+
+
+FUENTES DE MÚSICA GRATUITA (ejemplos):
+- Pixabay Music
+- Free Music Archive
+- Incompetech (música de Kevin MacLeod)
+- YouTube Audio Library
+
