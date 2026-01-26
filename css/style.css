@@ -5,17 +5,17 @@
 
 /* Variables CSS para la paleta de colores */
 :root {
-    --olive-dark: #6B7059;
-    --olive-medium: #86895d;
-    --olive-light: #A8AB8F;
-    --olive-accent: #B5B89A;
+    --olive-dark: #B5BC7A;
+    --olive-medium: #D3DB92;
+    --olive-light: #E4E9B8;
+    --olive-accent: #EDF0D0;
     --white: #FFFFFF;
     --cream: #FAFAF8;
     --text-dark: #2C2C2C;
     --text-light: #666666;
-    --shadow-soft: rgba(134, 137, 93, 0.1);
-    --shadow-medium: rgba(134, 137, 93, 0.2);
-    --shadow-strong: rgba(134, 137, 93, 0.3);
+    --shadow-soft: rgba(211, 219, 146, 0.1);
+    --shadow-medium: rgba(211, 219, 146, 0.2);
+    --shadow-strong: rgba(211, 219, 146, 0.3);
 }
 
 /* Reset y estilos base */
@@ -576,7 +576,7 @@ section {
     border-radius: 20px;
     box-shadow: 0 8px 25px var(--shadow-soft);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(134, 137, 93, 0.1);
+    border: 1px solid rgba(211, 219, 146, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -600,7 +600,7 @@ section {
 .detail-card:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 15px 40px var(--shadow-medium);
-    border-color: rgba(134, 137, 93, 0.2);
+    border-color: rgba(211, 219, 146, 0.2);
 }
 
 .detail-icon-wrapper {
@@ -610,7 +610,7 @@ section {
     width: 90px;
     height: 90px;
     margin-bottom: 25px;
-    background: linear-gradient(135deg, var(--olive-light), var(--olive-accent));
+    background: linear-gradient(135deg, #E4E9B8, #EDF0D0);
     border-radius: 50%;
     position: relative;
     transition: all 0.4s ease;
@@ -618,7 +618,7 @@ section {
 
 .detail-card:hover .detail-icon-wrapper {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 20px rgba(134, 137, 93, 0.3);
+    box-shadow: 0 8px 20px rgba(211, 219, 146, 0.3);
 }
 
 .detail-icon-wrapper::after {
@@ -639,9 +639,10 @@ section {
 .detail-icon {
     width: 50px;
     height: 50px;
-    color: var(--white);
-    stroke-width: 2;
+    color: #6B7059;
+    stroke-width: 2.5;
     transition: all 0.4s ease;
+    fill: none;
 }
 
 .detail-card:hover .detail-icon {
@@ -694,7 +695,7 @@ section {
     color: var(--text-light);
     box-shadow: 0 8px 25px var(--shadow-soft);
     overflow: hidden;
-    border: 1px solid rgba(134, 137, 93, 0.1);
+    border: 1px solid rgba(211, 219, 146, 0.1);
     transition: all 0.4s ease;
     position: relative;
 }
@@ -960,14 +961,16 @@ section {
     width: 60px;
     height: 60px;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, var(--olive-light), var(--olive-accent));
+    background: linear-gradient(135deg, #E4E9B8, #EDF0D0);
     border-radius: 50%;
 }
 
 .reception-location-icon svg {
     width: 35px;
     height: 35px;
-    color: var(--white);
+    color: #6B7059;
+    stroke-width: 2.5;
+    fill: none;
 }
 
 .reception-location-title {
@@ -1074,7 +1077,7 @@ section {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 8px 25px var(--shadow-soft);
-    border: 1px solid rgba(134, 137, 93, 0.1);
+    border: 1px solid rgba(211, 219, 146, 0.1);
     transition: all 0.4s ease;
 }
 
