@@ -199,7 +199,7 @@ function initGallery() {
     if (!carouselTrack) return;
     
     let currentSlide = 0;
-    const totalSlides = 4; // w1, w2, w3, w4
+    const totalSlides = 8; // w1, w2, w3, w4
     let autoSlideInterval = null;
     let isUserInteracting = false;
     
