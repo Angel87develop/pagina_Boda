@@ -16,6 +16,7 @@
     --shadow-soft: rgba(211, 220, 148, 0.15);
     --shadow-medium: rgba(211, 220, 148, 0.25);
     --shadow-strong: rgba(211, 220, 148, 0.4);
+    --danger: #ff4d4d;
 }
 
 /* Reset y estilos base */
@@ -514,6 +515,69 @@ section {
     text-align: center;
 }
 
+.countdown-section.countdown-urgent .countdown-number {
+    color: var(--danger);
+}
+
+.countdown-section.countdown-urgent .countdown-separator,
+.countdown-section.countdown-urgent .countdown-label {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.countdown-section.countdown-urgent .countdown-number {
+    text-shadow: 0 0 18px rgba(255, 77, 77, 0.55), 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.wedding-end-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.wedding-end-overlay.active {
+    display: flex;
+}
+
+.wedding-end-content {
+    width: min(980px, 96vw);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 28px 22px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.wedding-end-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.wedding-end-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 14px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.wedding-end-video {
+    width: 100%;
+    max-height: min(70vh, 560px);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.35);
+    outline: none;
+}
 .countdown-section .section-title {
     color: var(--white);
 }

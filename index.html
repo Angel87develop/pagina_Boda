@@ -138,6 +138,18 @@
         </div>
     </section>
 
+    <!-- Overlay final: mensaje + video -->
+    <div class="wedding-end-overlay" id="weddingEndOverlay" aria-hidden="true">
+        <div class="wedding-end-content" role="dialog" aria-modal="true" aria-label="Mensaje de felicitación">
+            <h2 class="wedding-end-title">Felicidades a los novios</h2>
+            <p class="wedding-end-subtitle" id="weddingEndHint" hidden>Toca el video para reproducir.</p>
+            <video class="wedding-end-video" id="timelineVideo" playsinline preload="metadata">
+                <source src="assets/video/timeline.mov" type="video/quicktime">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
+
     <!-- Sección Detalles del Evento -->
     <section class="event-details" id="eventDetails">
         <div class="container">

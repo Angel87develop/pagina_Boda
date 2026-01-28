@@ -133,6 +133,10 @@ function initCountdown() {
     const hoursEl = document.getElementById('hours');
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
+    const countdownSection = document.getElementById('countdown');
+    const weddingEndOverlay = document.getElementById('weddingEndOverlay');
+    const timelineVideo = document.getElementById('timelineVideo');
+    const weddingEndHint = document.getElementById('weddingEndHint');
     
     // Verificar que todos los elementos existan
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
@@ -140,6 +144,31 @@ function initCountdown() {
         return;
     }
     
+    let hasFinished = false;
+    let intervalId = null;
+
+    function showWeddingEnd() {
+        if (hasFinished) return;
+        hasFinished = true;
+
+        if (weddingEndOverlay) {
+            weddingEndOverlay.classList.add('active');
+            weddingEndOverlay.setAttribute('aria-hidden', 'false');
+        }
+
+        if (timelineVideo) {
+            // Intentar reproducir; algunos navegadores lo bloquearán si no hay gesto del usuario.
+            const playPromise = timelineVideo.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+                playPromise.catch(() => {
+                    // Mostrar controles y una pista para que el usuario inicie la reproducción.
+                    timelineVideo.controls = true;
+                    if (weddingEndHint) weddingEndHint.hidden = false;
+                });
+            }
+        }
+    }
+
     function updateCountdown() {
         const now = new Date().getTime();
         const weddingTime = WEDDING_DATE.getTime();
@@ -151,6 +180,9 @@ function initCountdown() {
             if (hoursEl) hoursEl.textContent = '00';
             if (minutesEl) minutesEl.textContent = '00';
             if (secondsEl) secondsEl.textContent = '00';
+            if (countdownSection) countdownSection.classList.add('countdown-urgent');
+            if (intervalId) clearInterval(intervalId);
+            showWeddingEnd();
             return;
         }
         
@@ -171,6 +203,12 @@ function initCountdown() {
         if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
         if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
         if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+
+        // Cuando falte 1 día o menos, el contador se vuelve rojo
+        if (countdownSection) {
+            if (totalDays <= 1) countdownSection.classList.add('countdown-urgent');
+            else countdownSection.classList.remove('countdown-urgent');
+        }
         
         // Animación sutil al cambiar
         const elements = [daysEl, hoursEl, minutesEl, secondsEl].filter(el => el !== null);
@@ -184,7 +222,7 @@ function initCountdown() {
     
     // Actualizar inmediatamente y luego cada segundo
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    intervalId = setInterval(updateCountdown, 1000);
 }
 
 // ============================================
