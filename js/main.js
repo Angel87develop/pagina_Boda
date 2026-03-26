@@ -134,9 +134,6 @@ function initCountdown() {
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
     const countdownSection = document.getElementById('countdown');
-    const weddingEndOverlay = document.getElementById('weddingEndOverlay');
-    const timelineVideo = document.getElementById('timelineVideo');
-    const weddingEndHint = document.getElementById('weddingEndHint');
     
     // Verificar que todos los elementos existan
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
@@ -150,23 +147,6 @@ function initCountdown() {
     function showWeddingEnd() {
         if (hasFinished) return;
         hasFinished = true;
-
-        if (weddingEndOverlay) {
-            weddingEndOverlay.classList.add('active');
-            weddingEndOverlay.setAttribute('aria-hidden', 'false');
-        }
-
-        if (timelineVideo) {
-            // Intentar reproducir; algunos navegadores lo bloquearán si no hay gesto del usuario.
-            const playPromise = timelineVideo.play();
-            if (playPromise && typeof playPromise.then === 'function') {
-                playPromise.catch(() => {
-                    // Mostrar controles y una pista para que el usuario inicie la reproducción.
-                    timelineVideo.controls = true;
-                    if (weddingEndHint) weddingEndHint.hidden = false;
-                });
-            }
-        }
     }
 
     function updateCountdown() {
